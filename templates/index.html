@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Type Messages</title>
+</head>
+<body>
+    <h1>Type your message</h1>
+    <form method="post" action="/">
+        <input type="text" name="message" placeholder="Type here" required />
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Messages:</h2>
+    <ul>
+        {% for msg in messages %}
+        <li>{{ msg }}</li>
+        {% else %}
+        <li>No messages yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
